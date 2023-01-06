@@ -1,0 +1,9 @@
+-r requirements.txt
+black
+isort
+pytest
+flake8
+mypy
+pytest-cov
+pytorch-ignite
+pytest-xdist

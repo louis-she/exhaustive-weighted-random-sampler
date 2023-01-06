@@ -1,2 +1,3 @@
-# distributed-weighted-sampler
-The missing distributed weighted random sampler for PyTorch
+# ExhaustiveWeightedRandomSampler
+ExhaustiveWeightedRandomSampler can exhaustively sample the indices with a specific weight over epochs.
+
