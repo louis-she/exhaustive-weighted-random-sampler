@@ -10,7 +10,7 @@ ExhaustiveWeightedRandomSampler can exhaustively sample the indices with a speci
 pip install git+https://github.com/louis-she/exhaustive-weighted-random-sampler.git
 ```
 
-## Comparing the differences
+## Usage & Comparasion
 
 ```python
 import torch
@@ -46,4 +46,20 @@ output:
 
 explain: all the 0 to 8 appears in the yield results.
 """
+```
+
+## Use in DDP
+
+It can be used in `DDP` if [pytorch-ignite](https://pytorch.org/ignite/index.html) has been installed.
+
+```python
+from ignite.distributed import DistributedProxySampler
+from torch.utils.data import DataLoader
+
+dataset = ...
+
+sampler = DistributedProxySampler(
+    ExhaustiveWeightedRandomSampler(weights, num_samples=10000)
+)
+loader = DataLoader(dataset, sampler=sampler, ...)
 ```
