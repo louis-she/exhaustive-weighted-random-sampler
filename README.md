@@ -6,8 +6,8 @@ ExhaustiveWeightedRandomSampler can exhaustively sample the indices with a speci
 
 ## Installation
 
-```
-pip install git+https://github.com/louis-she/exhaustive-weighted-random-sampler.git
+```bash
+pip install exhaustive-weighted-random-sampler
 ```
 
 ## Usage & Comparasion
